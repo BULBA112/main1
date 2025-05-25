@@ -1,0 +1,283 @@
+<html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUST HUB | Гайды, карты, сервера</title>
+    <style>
+        /* Общие стили */
+:root {
+    --dark-bg: #1a1a1a;
+    --rust-orange: #e67e22;
+    --rust-dark: #8b4513;
+    --text-light: #e0e0e0;
+    --text-gray: #999;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--rust-orange);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--rust-orange);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #d35400;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+/* Шапка */
+.header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--rust-dark);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Баннер */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.imgur.com/JrQZ3Lm.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 30px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Карточки */
+.news-grid, .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.news-card, .guide-card {
+    background: #252525;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.news-card:hover, .guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card h3, .guide-card h3 {
+    margin: 15px 0 10px;
+    padding: 0 15px;
+    color: var(--rust-orange);
+}
+
+.news-card p, .guide-card p {
+    padding: 0 15px 15px;
+    color: var(--text-gray);
+}
+
+.guide-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.guide-card span {
+    font-size: 2rem;
+}
+
+/* Футер */
+.footer {
+    background: #000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid var(--rust-dark);
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://i.imgur.com/zYlZb3P.png" alt="Rust Logo" width="40">
+                <h1>RUST HUB</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="https://m.ok.ru/group/54269892624390">Главная</a></li>
+                    <li><a href="https://steamcommunity.com/app/252490/guides/?browsesort=trend&browsefilter=trend&requiredtags%5B0%5D=Russian&p=1">Гайды</a></li>
+                    <li><a href="https://rustmaps.com/">Карты</a></li>
+                    <li><a href="https://gamemonitoring.ru/rust/servers">Сервера</a></li>
+                    <li><a href="https://steamcommunity.com/app/252490?l=russian">Сообщество</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    
+    <section class="banner">
+        <div class="container">
+            <h2>Выживай. Доминируй. Уничтожай.</h2>
+            <p>Получай актуальные гайды и топ серверов Rust</p>
+            <a href="https://store.steampowered.com/app/252490/Rust/" class="btn">Начать играть</a>
+        </div>
+    </section>
+
+    
+    <main class="container">
+        
+        <section class="news">
+            <h2>Последние новости</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="https://i.imgur.com/9fK7WQj.jpg" alt="Обновление Rust">
+                    <h3>Обновление 1.95</h3>
+                    <p>Новые предметы и изменения PVP</p>
+                    <a href="https://mp1st.com/news/rust-update-1-95-adds-new-content-this-may-30" class="btn-small">Читать</a>
+                </article>
+                <article class="news-card">
+                    <img src="https://i.imgur.com/5tQm6bF.jpg" alt="Ивент Halloween">
+                    <h3>Halloween Event 2024</h3>
+                    <p>Новые страшные мобы и скины</p>
+                    <a href="https://rust.facepunch.com/news/halloween24" class="btn-small">Читать</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Популярные гайды -->
+        <section class="guides">
+            <h2>Топ гайдов</h2>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <span>⚔️</span>
+                    <h3>Лучшая база для соло</h3>
+                    <p>2x2 с ловушками</p>
+                     <a href="https://dzen.ru/video/watch/681f213b3d103744c8532797"  class="btn-small">Читать</a>
+                </div>
+                <div class="guide-card">
+                    <span>🚁</span>
+                    <h3>Как убить Heli</h3>
+                    <p>Секретные позиции</p>
+                    <a href="https://wargm.ru/blog/3582/vertolet_v_rust_kak_ego_vyzvat_i_unichtojit">Читать</a>
+                </div>
+                <div class="guide-card">
+                    <span>🧪</span>
+                    <h3>Фарм серы</h3>
+                    <p>Лучшие локации</p>
+                    <a href="https://wotpack.ru/sera-v-palworld-gde-najti-i-kak-dobyt/">Читать</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 RUST HUB | Не аффилирован с Facepunch Studios</p>
+            
+        </div>
+    </footer>
+</body>
+</html>
